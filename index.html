@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday My Luna</title>
+  <title>Happy Birthday My Love</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,6 +12,7 @@
       background: linear-gradient(to bottom, #ffe0ec, #fff0f5);
       color: #333;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     header {
@@ -25,12 +26,45 @@
     header h1 {
       font-size: 3em;
       margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: .15em solid white;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: white; }
     }
 
     section {
       padding: 60px 20px;
       max-width: 800px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    section:nth-of-type(2) {
+      animation-delay: 1s;
+    }
+
+    section:nth-of-type(3) {
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .love-letter {
@@ -59,15 +93,15 @@
       font-size: 0.9em;
     }
 
-    /* Floating hearts */
+    /* Elegant Floating Hearts */
     .heart {
       position: fixed;
       width: 20px;
       height: 20px;
       background-color: pink;
       transform: rotate(45deg);
-      animation: float 10s infinite ease-in;
       opacity: 0.7;
+      animation: float 8s infinite ease-in;
     }
 
     .heart::before,
@@ -105,7 +139,7 @@
 <body>
 
   <header>
-    <h1>Happy Birthday, My Princess! 🎉</h1>
+    <h1>Happy Birthday, My Love! 🎉</h1>
     <p>You're the most beautiful part of my life.</p>
   </header>
 
@@ -114,33 +148,4 @@
     <p>
       My dearest love,<br><br>
       On this special day, I just want to say how grateful I am for you. Your smile lights up my world, your laugh fills my heart, and your love makes every day brighter. I'm so lucky to walk this life with you by my side.<br><br>
-      Happy birthday, my sweetheart. Here's to countless more birthdays, adventures, and beautiful memories together. I love you more than words can express.<br><br>
-      With all my heart,<br>
-      [Your Name]
-    </p>
-  </section>
-
-  <section class="playlist">
-    <h2>🎶 Our Playlist</h2>
-    <!-- Replace the embed link below with your own playlist -->
-    <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>
-
-  <footer>
-    Made with ❤️ just for you.
-  </footer>
-
-  <!-- Floating hearts -->
-  <script>
-    const heartCount = 20;
-    for (let i = 0; i < heartCount; i++) {
-      const heart = document.createElement('div');
-      heart.classList.add('heart');
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
-      document.body.appendChild(heart);
-    }
-  </script>
-
-</body>
-</html>
+      Happy birthday, my sweetheart. Here's to countless more birthdays, adventures, and beautiful
